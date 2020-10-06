@@ -6,11 +6,6 @@ require('dotenv').config()
 const port = 5000;
 
 
-
-
-
-
-
 const app = express()
 app.use(cors());
 app.use(bodyParser.json());
@@ -67,6 +62,4 @@ app.get('/', (req, res) => {
   res.send('Hello World!')
 })
 
-app.listen(process.env.Port || port, () => {
-  console.log(`Example app listening at http://localhost:${port}`)
-})
+app.listen(process.env.Port || port)
